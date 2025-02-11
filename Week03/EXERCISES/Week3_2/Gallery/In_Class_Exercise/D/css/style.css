@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: black;
+  background: url("../img/bg.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+body {
+  font-family: "Kaushan Script", serif;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+/* Navigation */
+header {
+  width: 100%;
+  height: 50px;
+  padding: 0 10%;
+  background-color: grey;
+  overflow-y: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  color: #333;
+}
+
+header {
+  background: url("../img/moroccan-flower.png");
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  list-style-type: none;
+  background-color: rgba(40, 40, 40, 0.5);
+}
+
+nav li {
+  font-size: 18px;
+  width: 120px;
+  height: 50px;
+  line-height: 50px;
+}
+
+nav a {
+  display: block;
+  text-decoration: none;
+  color: #333;
+  /* We always define transitions on the base / default state */
+  transition: all 1s linear;
+}
+
+nav a:hover {
+  background-color: rgba(40, 40, 40, 0.5);
+  color: white;
+}
+
+nav a.active {
+  background-color: black;
+  color: white;
+}
+
+/* Gallery */
+.container {
+  width: 900px;
+  margin: 100px auto;
+  font-size: 0;
+}
+
+.polaroid {
+  width: 260px;
+  margin: 20px;
+  display: inline-block;
+  position: relative;
+}
+
+.polaroid img {
+  border: 10px solid #ccc;
+  border-bottom-width: 45px;
+}
+
+.polaroid p {
+  font-size: 1rem;
+  position: absolute;
+  bottom: 10px;
+  width: 260px;
+  text-align: center;
+  color: #333;
+}
+
+/* TRANSFORMS and TRANSITIONS */
+
+.scaleUp {
+  transform: scale(1.5);
+  z-index: 100;
+}
+
+.scalex {
+  transform: scaleY(2, 1);
+}
+
+.scaleY {
+  transform: scale(2);
+}
+
+.skewX {
+  transform: skew(-20deg);
+  transform-origin: top;
+}
+
+.skewY {
+  transform: skewY(-20deg);
+}
+
+.skewBoth {
+  transform: skew(10deg, 40deg);
+}
+
+.rotX {
+  transform: rotateX(180deg);
+}
+
+.rotY {
+  transform: rotateY(180deg);
+}
+
+.rotZ {
+  transform: rotateZ(180deg);
+}
+
+.rotateLeft {
+  transform: rotate(-20deg);
+  transition: all 5s ease-out;
+  transform-origin: bottom right;
+}
+
+.rotateLeft:hover {
+  transform: rotate(+20deg);
+}
+
+.skewHover {
+  transform: skewX(30deg);
+  transition: all 3s ease-in;
+}
+
+.skewHover:hover {
+  transform: skewX(-30deg);
+}
+
+.scaleHover {
+  transform: scale(0.5);
+  transition: all 3s ease-in;
+}
+
+.scaleHover:hover {
+  transform: scale(1.2);
+}
+
+/* Filters */
+
+.colorSwap {
+  filter: grayscale(100%);
+  transition: all 5s linear;
+}
+
+.colorSwap:hover {
+  filter: grayscale(0%);
+}
+
+.blur {
+  filter: blur(30);
+}
