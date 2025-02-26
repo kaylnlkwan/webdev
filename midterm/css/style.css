@@ -193,3 +193,51 @@ footer a:hover {
   max-width: 50%;
   border-radius: 24px;
 }
+
+/* Smaller than an Ipad, aka mobile phones */
+@media screen and (max-width: 786px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  nav {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    gap: 10px;
+  }
+
+  .contentTitle {
+    flex-direction: column;
+  }
+
+  .recipeHeader {
+    flex-direction: column;
+  }
+
+  .ingredientGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .recipeIntro {
+    max-width: 100%;
+  }
+
+  .instructions {
+    flex-direction: column;
+  }
+  .instructions img {
+    max-width: 100%;
+  }
+
+  .recipeIntro h1 {
+    margin-top: 16px;
+  }
+}
