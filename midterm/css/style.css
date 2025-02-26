@@ -1,0 +1,195 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+
+/* Desktop First Styles */
+
+.navbar {
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.2vw 7vw;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid black;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.navbar img {
+  width: auto;
+  height: 42px;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  gap: 20px;
+}
+
+nav ul li a {
+  font-size: 1.1rem;
+  font-weight: lighter;
+  text-decoration: none;
+  color: black;
+}
+
+nav ul li a:hover {
+  color: gray;
+}
+
+nav ul li a.active {
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+footer {
+  border-top: 1px solid black;
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  padding: 40px 0;
+}
+
+footer a {
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  color: black;
+}
+
+footer a:hover {
+  color: gray;
+}
+
+.content {
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.contentTitle {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.recipeGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.recipeCard {
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.recipeCard img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+
+.recipeCard p {
+  position: relative;
+  bottom: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  padding: 8px 8px;
+  border: solid black;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 1rem;
+  text-align: center;
+  max-width: 300px;
+}
+
+.recipeCard a {
+  text-decoration: none;
+  color: black;
+}
+
+.recipeContainer {
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+.recipeHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 56px;
+}
+
+.recipeIntro {
+  flex: 1;
+  max-width: 40%;
+}
+
+.recipeIntro h1 {
+  font-size: 6rem;
+  margin-bottom: 24px;
+}
+
+.recipeIntro p {
+  font-size: 1.1rem;
+}
+
+.ingredients {
+  flex: 1;
+  max-width: 55%;
+}
+
+.ingredientGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding-top: 20px;
+}
+
+.ingredientItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.ingredientItem img {
+  width: auto;
+  height: 100px;
+}
+
+.ingredientItem p {
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+.instructions {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.instructions img {
+  max-width: 50%;
+  border-radius: 24px;
+}
