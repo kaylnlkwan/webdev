@@ -10,61 +10,55 @@ body {
 
 /* Desktop First Styles */
 
+/* NAVIGATION */
 .navbar {
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  padding: 2.2vw 7vw;
+  padding: 2rem 11rem;
   display: flex;
   flex-direction: row;
   border-bottom: 1px solid black;
 }
 
-nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-}
-
 .navbar img {
   width: auto;
-  height: 42px;
+  height: 3rem;
 }
 
 nav ul {
-  display: flex;
-  flex-direction: row;
   list-style-type: none;
-  gap: 20px;
 }
 
-nav ul li a {
+.navbar a {
   font-size: 1.1rem;
   font-weight: lighter;
   text-decoration: none;
   color: black;
 }
 
-nav ul li a:hover {
+.navbar a:hover {
   color: gray;
 }
 
-nav ul li a.active {
+.navbar a.active {
   text-decoration: underline;
-  text-underline-offset: 6px;
+  text-underline-offset: 0.5rem;
 }
+
+/* FOOTER */
 
 footer {
   border-top: 1px solid black;
   display: flex;
   justify-content: center;
-  gap: 80px;
-  padding: 40px 0;
+  gap: 6rem;
+  padding: 2rem 0rem;
 }
 
 footer a {
   text-decoration: underline;
-  text-underline-offset: 6px;
+  text-underline-offset: 0.5rem;
   color: black;
 }
 
@@ -72,8 +66,10 @@ footer a:hover {
   color: gray;
 }
 
+/* MAIN CONTENT */
+
 .content {
-  padding: 20px;
+  padding: 2rem 1rem;
   max-width: 1200px;
   margin: auto;
 }
@@ -83,18 +79,24 @@ footer a:hover {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 16px;
+  margin-bottom: 3%;
 }
+
+/* RECIPES */
 
 .recipeGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
+  gap: 1rem;
 }
 
 .recipeCard {
   border-radius: 15px;
+  position: relative;
   overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 
 .recipeCard img {
@@ -104,18 +106,18 @@ footer a:hover {
 }
 
 .recipeCard p {
-  position: relative;
-  bottom: 70px;
-  left: 50%;
+  position: absolute;
   transform: translateX(-50%);
+  left: 50%;
+  bottom: 1rem;
   background: white;
-  padding: 8px 8px;
+  padding: 1rem 1rem;
   border: solid black;
   border-radius: 12px;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 1.2rem;
   text-align: center;
-  max-width: 300px;
+  max-width: 500px;
 }
 
 .recipeCard a {
@@ -123,20 +125,18 @@ footer a:hover {
   color: black;
 }
 
-.recipeContainer {
-  display: flex;
-  flex-direction: column;
-  max-width: 1200px;
-  margin: auto;
-  padding: 40px 20px;
+.recipeCard:hover {
+  opacity: 80%;
 }
+
+/* RECIPE PAGE */
 
 .recipeHeader {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 56px;
+  margin-bottom: 4%;
 }
 
 .recipeIntro {
@@ -145,8 +145,8 @@ footer a:hover {
 }
 
 .recipeIntro h1 {
-  font-size: 6rem;
-  margin-bottom: 24px;
+  font-size: 5rem;
+  margin-bottom: 4%;
 }
 
 .recipeIntro p {
@@ -161,8 +161,8 @@ footer a:hover {
 .ingredientGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  padding-top: 20px;
+  gap: 1rem;
+  padding-top: 3%;
 }
 
 .ingredientItem {
@@ -174,18 +174,23 @@ footer a:hover {
 
 .ingredientItem img {
   width: auto;
-  height: 100px;
+  height: 5rem;
+}
+
+.ingredientItem img:hover {
+  width: auto;
+  transform: scale(1.5) rotate(-20deg);
 }
 
 .ingredientItem p {
   font-size: 1rem;
-  margin-top: 10px;
+  margin-top: 5%;
 }
 
 .instructions {
   display: flex;
   flex-direction: row;
-  gap: 20px;
+  gap: 4%;
   justify-content: space-between;
 }
 
@@ -196,10 +201,14 @@ footer a:hover {
 
 /* Smaller than an Ipad, aka mobile phones */
 @media screen and (max-width: 786px) {
+  .content {
+    padding: 1rem 2rem;
+  }
+
   .navbar {
     flex-direction: column;
     align-items: center;
-    padding: 20px;
+    padding: 2rem;
   }
   nav {
     flex-direction: column;
@@ -210,8 +219,9 @@ footer a:hover {
   nav ul {
     flex-direction: column;
     align-items: center;
-    padding: 0;
     gap: 10px;
+    text-align: center;
+    padding: 0;
   }
 
   .contentTitle {
@@ -220,10 +230,13 @@ footer a:hover {
 
   .recipeHeader {
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   .ingredientGrid {
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-direction: column;
   }
 
   .recipeIntro {
@@ -232,12 +245,20 @@ footer a:hover {
 
   .instructions {
     flex-direction: column;
+    gap: 1rem;
   }
+
   .instructions img {
     max-width: 100%;
   }
 
   .recipeIntro h1 {
     margin-top: 16px;
+    font-size: 3rem;
+  }
+
+  footer {
+    padding: 1rem;
+    gap: 2rem;
   }
 }
