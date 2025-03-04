@@ -6,6 +6,7 @@ html,
 body {
   margin: 0;
   font-family: "Inter", sans-serif;
+  cursor: url("../assets/customcursor.png"), auto; /* Added from online: https://www.reddit.com/r/neocities/comments/10bitbd/how_do_you_do_custom_cursors/  */
 }
 
 /* Desktop First Styles */
