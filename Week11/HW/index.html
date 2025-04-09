@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Daily Horoscope</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Your horoscope for today</h1>
+      <div class="horoscope-form">
+        <label for="zodiac-sign">Choose your zodiac sign:</label>
+        <select id="zodiac-sign">
+          <option value="">Choose your sign</option>
+          <option value="aries">Aries</option>
+          <option value="taurus">Taurus</option>
+          <option value="gemini">Gemini</option>
+          <option value="cancer">Cancer</option>
+          <option value="leo">Leo</option>
+          <option value="virgo">Virgo</option>
+          <option value="libra">Libra</option>
+          <option value="scorpio">Scorpio</option>
+          <option value="sagittarius">Sagittarius</option>
+          <option value="capricorn">Capricorn</option>
+          <option value="aquarius">Aquarius</option>
+          <option value="pisces">Pisces</option>
+        </select>
+        <button id="get-horoscope">Get Your Horoscope</button>
+      </div>
+      <div id="horoscope-result" class="hidden">
+        <h2>Your horoscope for today!</h2>
+        <div id="horoscope-text"></div>
+      </div>
+    </div>
+    <script>
+      const horoscopes = {
+        aries: [
+          "Today is a day for bold moves and new beginnings. Trust your instincts and take that leap of faith.",
+          "Your energy is high today, making it perfect for tackling challenging projects.",
+          "A surprise encounter could lead to an exciting opportunity. Stay open to new connections.",
+        ],
+        taurus: [
+          "Focus on your financial goals today. A steady approach will yield the best results.",
+          "Your practical nature will help you solve a complex problem that's been bothering you.",
+          "Take time to appreciate the beauty around you. Nature will provide the answers you seek.",
+        ],
+        gemini: [
+          "Your communication skills are at their peak today. Use them to resolve any misunderstandings.",
+          "A new idea could lead to an exciting project. Don't be afraid to explore different possibilities.",
+          "Your social circle might expand today. Be open to meeting new people.",
+        ],
+        cancer: [
+          "Trust your intuition today. It's guiding you in the right direction.",
+          "Focus on your home and family. Small gestures will mean a lot to your loved ones.",
+          "Your emotional intelligence will help you navigate a tricky situation.",
+        ],
+        leo: [
+          "Your natural leadership abilities will shine today. Others will look to you for guidance.",
+          "A creative project could bring you recognition. Don't hold back your ideas.",
+          "Your confidence will attract positive attention. Use it to make important connections.",
+        ],
+        virgo: [
+          "Your attention to detail will help you spot an important opportunity today.",
+          "Focus on organization and planning. Your methodical approach will pay off.",
+          "A health-related goal might be easier to achieve than you think.",
+        ],
+        libra: [
+          "Your diplomatic skills will be needed today. You can help resolve a conflict.",
+          "Balance is key. Make time for both work and relaxation.",
+          "A decision you've been putting off should be made today. Trust your judgment.",
+        ],
+        scorpio: [
+          "Your intensity will help you uncover important information today.",
+          "Trust your instincts in a financial matter. They're leading you in the right direction.",
+          "A transformation you've been working toward is closer than you think.",
+        ],
+        sagittarius: [
+          "Adventure calls today. Be open to new experiences and opportunities.",
+          "Your optimism will inspire others. Share your positive outlook.",
+          "A learning opportunity could lead to exciting new possibilities.",
+        ],
+        capricorn: [
+          "Your hard work is about to pay off. Stay focused on your goals.",
+          "A practical approach to a problem will yield the best results today.",
+          "Your leadership skills will be recognized. Don't be afraid to take charge.",
+        ],
+        aquarius: [
+          "Your innovative thinking could lead to a breakthrough today.",
+          "Focus on your humanitarian goals. Your unique perspective is valuable.",
+          "A friendship might deepen into something more meaningful.",
+        ],
+        pisces: [
+          "Your creativity is at its peak today. Express yourself through art or writing.",
+          "Trust your intuition in a personal matter. It's guiding you correctly.",
+          "A spiritual practice could bring you peace and clarity.",
+        ],
+      };
+
+      // get random horoscope
+      function getRandomHoroscope(sign) {
+        const readings = horoscopes[sign]; // get the readings for the selected horoscope
+        return readings[Math.floor(Math.random() * readings.length)]; // pick a random reading (generates random number between 1-3)
+      }
+
+      // display horoscope
+      function displayHoroscope() {
+        const sign = document.getElementById("zodiac-sign").value; // get the sign selected
+        const resultDiv = document.getElementById("horoscope-result");
+        const horoscopeText = document.getElementById("horoscope-text");
+
+        if (!sign) {
+          // if there is no sign selected
+          alert("Please select your zodiac sign");
+          return;
+        }
+
+        const reading = getRandomHoroscope(sign); // run the function to get the ranodm reading
+        horoscopeText.textContent = reading;
+        resultDiv.classList.remove("hidden"); // display the reading
+      }
+
+      document
+        .getElementById("get-horoscope")
+        .addEventListener("click", displayHoroscope); // add the onclick function to display horoscope
+    </script>
+  </body>
+</html>

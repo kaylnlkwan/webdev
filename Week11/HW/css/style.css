@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background: white;
+  padding: 2rem;
+  width: 90%;
+  max-width: 600px;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 2rem;
+  color: black;
+  font-size: 2.5rem;
+}
+
+select,
+button {
+  padding: 0.8rem 1.5rem;
+  margin: 0.5rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+select {
+  background: rgba(255, 255, 255, 0.9);
+  width: 200px;
+}
+
+button {
+  background: #ffd700;
+  color: #1a1a2e;
+  font-weight: bold;
+}
+
+#horoscope-result {
+  padding: 1.5rem;
+  margin-top: 1rem;
+}
+
+#horoscope-text {
+  font-size: 1.2rem;
+}
+
+.hidden {
+  display: none;
+}
