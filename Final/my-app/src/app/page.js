@@ -91,7 +91,7 @@ export default function Home() {
               <div className="w-3 h-3 rounded-full bg-[#00CA4E]"></div>
             </div>
             <div className="font-mono text-sm text-gray-600">
-              /catgpt/desktop/gpt.html
+              /catgpt/desktop/gpt.cat
             </div>
             <div className="w-8"></div>
           </div>
@@ -108,7 +108,7 @@ export default function Home() {
                   <span className="ml-2">{message.content}</span>
                 </div>
               ))}
-              {isLoading && <div className="text-gray-500">Processing...</div>}
+              {isLoading && <div className="text-gray-500">Paw-cessing...</div>}
               <div ref={messagesEndRef} />{" "}
               {/* this is the div that will scroll to the bottom */}
             </div>
