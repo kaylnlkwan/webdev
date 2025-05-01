@@ -135,21 +135,18 @@ export default function Home() {
           <Link
             href="https://www.kaylnkwan.com/"
             className="text-black bg-[#EFEFEF] border border-[#00000014] rounded-full px-4 py-1 hover:bg-[#e0e0e0] transition-colors duration-200"
-            rel="noopener noreferrer" // go to new page
           >
             Portfolio
           </Link>
           <Link
             href="https://catoftheday.com/"
             className="text-black bg-[#EFEFEF] border border-[#00000014] rounded-full px-4 py-1 hover:bg-[#e0e0e0] transition-colors duration-200"
-            rel="noopener noreferrer"
           >
             Cats
           </Link>
           <a
             href="https://cataas.com/"
             target="_blank"
-            rel="noopener noreferrer"
             className="text-black bg-[#EFEFEF] border border-[#00000014] rounded-full px-4 py-1 hover:bg-[#e0e0e0] transition-colors duration-200"
           >
             More Cats
